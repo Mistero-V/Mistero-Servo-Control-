@@ -1,7 +1,7 @@
 # Mistero-Servo-Control
 Password for Wifi - 1803@###
-'''ino
- #include <ESP8266WiFi.h>
+```ino
+#include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
 #include <Servo.h>
 
@@ -29,8 +29,8 @@ void handleRoot() {
 <body>
   <h2>Servo Control</h2>
   <button onclick="fetch('/set?pos=90')">Neutral</button>
-  <button onclick="fetch('/set?pos=125'); setTimeout(() => { fetch('/set?pos=90'); }, 400);">Off</button>
-  <button onclick="fetch('/set?pos=76'); setTimeout(() => { fetch('/set?pos=90'); }, 400);">ON</button>
+  <button onclick="fetch('/set?pos=115'); setTimeout(() => { fetch('/set?pos=90'); }, 400);">Off</button>
+  <button onclick="fetch('/set?pos=75'); setTimeout(() => { fetch('/set?pos=90'); }, 400);">ON</button>
 </body>
 </html>
 )rawliteral";
@@ -71,4 +71,4 @@ void setup() {
 void loop() {
   server.handleClient();
 }
-'''
+```
