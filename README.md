@@ -1,3 +1,3 @@
 # Mistero-Servo-Control
-Passwordd for Wifi - 1803@###
+Password for Wifi - 1803@###
 
