@@ -1,14 +1,14 @@
- #include <ESP8266WiFi.h>
+#include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
 #include <Servo.h>
 
-const char* ssid = "Mistero-Servo";
-const char* password = "1803@###";
+const char* ssid = "Mistero-Servo"; // You can change your wifi-name
+const char* password = "1803@###"; // You can change your password
 Servo myServo;
 
 ESP8266WebServer server(80);
 
-int servoPin = D7;   // GPIO2
+int servoPin = D7;   // GPIO2 
 int servoPos = 0;
 #define LED_PIN LED_BUILTIN
 
@@ -17,7 +17,7 @@ void handleRoot() {
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mistero-Servo Control</title>
+  <title>Mistero-Servo-Control</title>
   <style>
     body { font-family: Arial; text-align: center; margin-top: 50px; }
     button { font-size: 20px; padding: 15px 30px; margin: 10px; }
@@ -25,9 +25,8 @@ void handleRoot() {
 </head>
 <body>
   <h2>Servo Control</h2>
-  <button onclick="fetch('/set?pos=90')">Neutral</button>
-  <button onclick="fetch('/set?pos=125'); setTimeout(() => { fetch('/set?pos=90'); }, 400);">Off</button>
-  <button onclick="fetch('/set?pos=76'); setTimeout(() => { fetch('/set?pos=90'); }, 400);">ON</button>
+  <button onclick="fetch('/set?pos=115'); setTimeout(() => { fetch('/set?pos=90'); }, 400);">Off</button>   //Change the degree 115 to your convenience automatically it comes to 90 degree after turning on off the switch 
+  <button onclick="fetch('/set?pos=65'); setTimeout(() => { fetch('/set?pos=90'); }, 400);">ON</button>    // Change the degree 65 to your convenience automatically it comes to 90 degree after turning on off the switch
 </body>
 </html>
 )rawliteral";
@@ -49,10 +48,10 @@ void handleSet() {
 void setup() {
   Serial.begin(115200);
   pinMode(LED_PIN, OUTPUT);
-  digitalWrite(LED_PIN, HIGH); // LED OFF (active LOW)
+  digitalWrite(LED_PIN, HIGH); // LED OFF (active LOW)  // Want to on the onboard led just replace HIGH to LOW
 
   myServo.attach(servoPin, 500, 2500);
-  myServo.write(90);
+  myServo.write(90); // Initial position of servo, You can chnage at you convenience 
 
   WiFi.softAP(ssid, password);
   IPAddress IP = WiFi.softAPIP();
@@ -68,3 +67,5 @@ void setup() {
 void loop() {
   server.handleClient();
 }
+
+
