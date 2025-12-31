@@ -13,6 +13,8 @@ Connect the  Servo red wire to Vin of esp8266 or external 5v power source
 
 Connect Servo grey wire to gnd of esp8266
 
+NOTE- Use this connection only if powering the esp8266 through micro usb.
+
 
 
 # Source-Code
