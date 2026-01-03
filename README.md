@@ -1,5 +1,5 @@
 # Mistero-Servo-Control
-Password for Wifi - 1803@###
+Password for Wifi - MisteroV
 
 Wifi-Name - Mistero-Servo
 # Preference-Url
@@ -24,7 +24,7 @@ NOTE- Use this connection only if powering the esp8266 through micro usb.
 #include <Servo.h>
 
 const char* ssid = "Mistero-Servo"; // You can change your wifi-name
-const char* password = "1803@###"; // You can change your password
+const char* password = "MisteroV"; // You can change your password
 Servo myServo;
 
 ESP8266WebServer server(80);
