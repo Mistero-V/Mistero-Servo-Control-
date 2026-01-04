@@ -58,13 +58,13 @@ void handleRoot() {
     <h2>Welcome</h2>
 
     <div class="box">
-        <h3>Made with ❤️</h3>
+        <h3>Made with Love</h3>
         <button onclick="moveServo('/set', 120)">120°(Second servo)</button> 
         <button onclick="moveServo('/set2', 60)">60°(First servo)</button> 
     </div>
 
     <div class="box">
-        <h3>Made with ❤️</h3>
+        <h3>Made with Love</h3>
         <button onclick="moveServo('/set', 60)">60°(Second servo)</button> 
         <button onclick="moveServo('/set2', 120)">120°(First servo)</button>
     </div>
