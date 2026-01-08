@@ -92,3 +92,9 @@ void loop() {
 
 
 ```
+
+
+---
+
+       © 2026 Mistero. All rights reserved.
+
