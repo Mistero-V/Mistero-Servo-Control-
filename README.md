@@ -98,8 +98,6 @@ void loop() {
 
       Copyright (c) [2026] [Mistero]. All rights reserved.
 
-This source code is licensed under the [Creative Commons NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license](creativecommons.org).
-
 **Summary of Permissions and Restrictions:**
 
 *   **You Are Free To:**
